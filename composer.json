@@ -1,0 +1,21 @@
+{
+    "name": "mmedojevicbg/PHPUtils",
+    "description": "Various helpers for arrays, dates, etc",
+    "license": "gpl-3.0",
+    "keywords": ["php", "utils"],
+    "authors": [
+        {
+            "name": "Marko Medojevic",
+            "email": "mmedojevicbg@gmail.com"
+        }
+    ],
+    "require": {},
+    "require-dev": {
+        "phpunit/phpunit": "5.5.*"
+    },
+    "autoload": {
+        "psr-4": {
+            "mmedojevicbg\\PHPUtils\\": "src"
+        }
+    }
+}
