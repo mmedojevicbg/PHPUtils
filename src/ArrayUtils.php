@@ -4,7 +4,7 @@ namespace mmedojevicbg\PHPUtils;
 
 class ArrayUtils
 {
-    public static function multidimensionalToNested(array $array) {
+    public static function multidimensionalToNested(array $array, $valueAsArray = false) {
         $result = [];
         $array = array_values($array);
         if (count($array)) {
@@ -21,7 +21,14 @@ class ArrayUtils
                         }
                         $current = &$current[$element[$keys[$i]]];
                     }
-                    $current = $element[$keysLast];
+                    if($valueAsArray) {
+                        if(!is_array($current)) {
+                            $current = [];
+                        }
+                        $current[] = $element[$keysLast];
+                    } else {
+                        $current = $element[$keysLast];
+                    }
                 }
             }
         }
